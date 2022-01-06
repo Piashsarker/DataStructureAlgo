@@ -9,24 +9,25 @@ package problem
  *  2. LONG_INTEGER n
  */
 
+
+
 /**
 'abcac' -> total a in string 2
 n -> 10
 divider = n/L = 10/5 = 2
 remainder = 10%5 = 0
-
-
-
-
+count = 2
+remaindercount = 0
+ totalcount = count * divider + remainderCount
  **/
 
 fun repeatedString(s: String, n: Long): Long {
     // Write your code here
     var count: Long = 0
-    var divider: Long = n / s.length
-    var remainder = n % s.length
-    var totalCountInString = getTotalCharCount(s, 'a', s.length)
-    var totalCountInRemainder = getTotalCharCount(s, 'a', remainder.toInt())
+    val divider: Long = n / s.length
+    val remainder = n % s.length
+    val totalCountInString = getTotalCharCount(s, 'a', s.length)
+    val totalCountInRemainder = getTotalCharCount(s, 'a', remainder.toInt())
 
     count = totalCountInString * divider + totalCountInRemainder
     return count
