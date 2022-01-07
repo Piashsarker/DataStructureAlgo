@@ -6,7 +6,7 @@ class BubbleSort {
         for (i in 0 until array.size - 1) {
             for(j in 0 until array.size-1-i){
                 if(array[j] > array[j+1]){
-                    var temp = array[j+1]
+                    val temp = array[j+1]
                     array[j+1] = array[j]
                     array[j] = temp
                 }
